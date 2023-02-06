@@ -5,12 +5,7 @@ footer {
 
 .row {
   display: flex;
-  flex-wrap: wrap;
-}
-
-.footer-col {
-  width: 25%;
-  padding: 0 50px;
+  justify-content: space-between;
 }
 
 .footer-col__title {
@@ -33,11 +28,11 @@ footer {
   width: 50px;
 }
 
-.footer-col__suptitle .footer-col__suptitle-item:not(:last-child) {
+.footer-col__info-item:not(:last-child) {
   margin-bottom: 10px;
 }
 
-.footer-col__suptitle .footer-col__suptitle-item .footer-col__link {
+.footer-col__link {
   font-family: 'roboto';
   font-size: 18px;
   font-style: normal;
@@ -48,13 +43,12 @@ footer {
   display: block;
   transition: all 0.3s ease;
 }
-
-.footer-col__suptitle .footer-col__suptitle-item .footer-col__link:hover {
+.footer-col__link:hover {
   color: rgba(255, 255, 255, 0.9);
   padding-left: 8px;
 }
 
-.footer-col__suptitle-qr {
+.footer-col__contact-info-qr {
   width: 120px;
   height: 120px;
   border-radius: 20px;
@@ -64,14 +58,14 @@ footer {
   top: 10px;
 }
 
-.footer-col__suptitle-link {
+.footer-col__subtitle-link {
   width: 40px;
   height: 40px;
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.2);
   text-align: center;
-  line-height: 50px;
-  border-radius: 50%;
+  margin: 0 5px;
+  border-radius: 10px;
   color: #fff;
   transition: all 0.5s ease;
 }
@@ -85,14 +79,19 @@ footer {
 
 .footer-col__box-title {
   text-align: center;
+  border: 2px solid gray;
+  border-radius: 15px;
+  width: 230px;
+  height: 280px;
 }
 
-.footer-col__suptitle-qr-text {
+.footer-col__contact-info-qr-text {
   color: rgba(255, 255, 255, 0.6);
   font-weight: 300;
   font-style: normal;
   font-size: 13px;
   line-height: 20px;
+  margin: 20px auto;
 }
 
 .footer-text {
