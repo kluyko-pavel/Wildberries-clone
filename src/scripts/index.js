@@ -1,2 +1,4 @@
 import '../styles/main.scss'
-import '../scripts/modules/banner.js'
+import { initApp } from './app.js'
+
+initApp()
