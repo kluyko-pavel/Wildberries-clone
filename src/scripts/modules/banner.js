@@ -14,7 +14,7 @@ function handlerSlideRight () {
     count = 0
   }
   slideGallery.style.transform = `translateX(${-count * sliderBox.offsetWidth}px)`
-  dotsAtiveClassChange(count)
+  dotsActiveClassChange(count)
 }
 
 function handlerSlideLeft () {
@@ -23,10 +23,10 @@ function handlerSlideLeft () {
     count = sliderImages.length - 1
   }
   slideGallery.style.transform = `translateX(${-count * sliderBox.offsetWidth}px)`
-  dotsAtiveClassChange(count)
+  dotsActiveClassChange(count)
 }
 
-function dotsAtiveClassChange (count) {
+function dotsActiveClassChange (count) {
   sliderDots.forEach(item => item.classList.remove('active-dot'))
   sliderDots[count].classList.add('active-dot')
 }
@@ -34,7 +34,7 @@ function dotsAtiveClassChange (count) {
 function handlerChangeSlideByDots (event) {
   if (event.target.className === 'slider-box__dot' && 'slider-box__dot active-dot') {
     count = event.target.id
-    dotsAtiveClassChange(count)
+    dotsActiveClassChange(count)
     slideGallery.style.transform = `translateX(${-count * sliderBox.offsetWidth}px)`
   }
 }
