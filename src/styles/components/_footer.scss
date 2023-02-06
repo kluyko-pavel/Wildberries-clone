@@ -1,0 +1,108 @@
+footer {
+  background-color: #481173;
+  padding: 70px 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 50px;
+}
+
+.footer-col__title {
+  color: #fff;
+  font-family: 'roboto';
+  font-size: 22px;
+  line-height: 20px;
+  font-weight: 500;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.footer-col__title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  width: 50px;
+}
+
+.footer-col__suptitle .footer-col__suptitle-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col__suptitle .footer-col__suptitle-item .footer-col__link {
+  font-family: 'roboto';
+  font-size: 18px;
+  font-style: normal;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col__suptitle .footer-col__suptitle-item .footer-col__link:hover {
+  color: rgba(255, 255, 255, 0.9);
+  padding-left: 8px;
+}
+
+.footer-col__suptitle-qr {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  border: 1px solid black;
+  position: relative;
+  left: 55px;
+  top: 10px;
+}
+
+.footer-col__suptitle-link {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.footer-col__box {
+  border: 2px solid gray;
+  border-radius: 15px;
+  width: 230px;
+  height: 280px;
+}
+
+.footer-col__box-title {
+  text-align: center;
+}
+
+.footer-col__suptitle-qr-text {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.footer-text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
