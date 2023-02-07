@@ -5,12 +5,16 @@ const sliderDots = document.querySelectorAll('.slider-box__dot')
 const sliderBox = document.querySelector('.slider-box')
 const sliderImages = document.querySelectorAll('.slider-box__image')
 const sliderDotsSet = document.querySelector('.slider-box__dots-set')
-
 let count = 0
+
+function dotsActiveClassChange (count) {
+  sliderDots.forEach((item) => item.classList.remove('active-dot'))
+  sliderDots[count].classList.add('active-dot')
+}
 
 function handlerSlideRight () {
   count = count + 1
-  if (count > (sliderImages.length - 1)) {
+  if (count > sliderImages.length - 1) {
     count = 0
   }
   slideGallery.style.transform = `translateX(${-count * sliderBox.offsetWidth}px)`
@@ -24,11 +28,6 @@ function handlerSlideLeft () {
   }
   slideGallery.style.transform = `translateX(${-count * sliderBox.offsetWidth}px)`
   dotsActiveClassChange(count)
-}
-
-function dotsActiveClassChange (count) {
-  sliderDots.forEach(item => item.classList.remove('active-dot'))
-  sliderDots[count].classList.add('active-dot')
 }
 
 function handlerChangeSlideByDots (event) {
