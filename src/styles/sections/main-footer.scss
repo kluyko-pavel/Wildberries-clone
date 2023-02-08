@@ -20,7 +20,9 @@
 }
 
 .footer-col {
-  width: 20%;
+  &:nth-child(odd) {
+    width: 17%;
+  }
   &__title {
     color: #fff;
     font-size: 22px;
@@ -52,7 +54,7 @@
     transition: all 0.3s ease;
     &:hover {
       color: rgba(255, 255, 255, 0.9);
-      padding-left: 8px;
+      padding-left: 6px;
     }
   }
   &__box-wrapper {
@@ -68,8 +70,7 @@
   }
   &__contact-info-qr {
     margin-top: 18px;
-    width: 136px;
-    height: 136px;
+    width: 65.4%;
   }
   &__contact-info-qr-img {
     border-radius: 12px;
@@ -100,12 +101,15 @@
     justify-content: center;
     align-items: center;
     &:hover {
-      opacity: 0.7;
+      background-color: rgba(0, 0, 0, 0.4);
     }
   }
 
   &__app-link--huawei {
     background-color: #c8102e;
+    &:hover {
+      background-color: rgb(200, 16, 46, 0.4);
+    }
   }
 }
 .footer-copyright-text {
