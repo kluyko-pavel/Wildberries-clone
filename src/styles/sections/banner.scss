@@ -50,9 +50,10 @@
   }
 
   &__dots-set {
+    min-height: 20px;
     display: flex;
     align-items: center;
-    padding-top: 20px;
+    margin-top: 20px;
     justify-content: center;
     align-items: flex-end;
     gap: 10px;
