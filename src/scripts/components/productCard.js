@@ -20,7 +20,7 @@ export function createProductCard (image, price, oldPrice, productsBrand, produc
 
   const productDiscount = document.createElement('span')
   productDiscount.className = 'product-card__discount'
-  productDiscount.innerText = `-${price * 100 / oldPrice}% `
+  productDiscount.innerText = `-${Math.round((price * 100) / oldPrice)}% `
   priceBox.append(productDiscount)
 
   const productOldPrice = document.createElement('span')
