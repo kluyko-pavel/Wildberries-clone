@@ -1,4 +1,4 @@
-export function createProductCard (image, price, discount, oldPrice, productsBrand, productsName) {
+export function createProductCard (image, price, oldPrice, productsBrand, productsName) {
   const productCard = document.createElement('div')
   productCard.className = 'product-card'
   document.querySelector('.product-cards__container').append(productCard)
@@ -18,29 +18,29 @@ export function createProductCard (image, price, discount, oldPrice, productsBra
   productPrice.innerText = `${price} ₽ `
   priceBox.append(productPrice)
 
-  const productDicsount = document.createElement('span')
-  productDicsount.className = 'product-card__disount'
-  productDicsount.innerText = `-${discount}% `
-  priceBox.append(productDicsount)
+  const productDiscount = document.createElement('span')
+  productDiscount.className = 'product-card__discount'
+  productDiscount.innerText = `-${price * 100 / oldPrice}% `
+  priceBox.append(productDiscount)
 
   const productOldPrice = document.createElement('span')
   productOldPrice.className = 'product-card__old-price'
   productOldPrice.innerText = `${oldPrice} ₽ `
   priceBox.append(productOldPrice)
 
-  const productDescritpion = document.createElement('div')
-  productDescritpion.className = 'product-card__product-description-box'
-  productCard.append(productDescritpion)
+  const productDescription = document.createElement('div')
+  productDescription.className = 'product-card__product-description-box'
+  productCard.append(productDescription)
 
   const productBrand = document.createElement('span')
   productBrand.className = 'product-card__product-brand'
-  productBrand.innerText = `${productsBrand} · `
-  productDescritpion.append(productBrand)
+  productBrand.innerText = `${productsBrand} ·`
+  productDescription.append(productBrand)
 
   const productName = document.createElement('span')
   productName.className = 'product-card__product-name'
   productName.innerText = `${productsName}`
-  productDescritpion.append(productName)
+  productDescription.append(productName)
 
   const basketButton = document.createElement('button')
   basketButton.className = 'product-card__button'

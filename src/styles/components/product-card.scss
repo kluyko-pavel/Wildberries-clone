@@ -1,9 +1,4 @@
 .product-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 5px 0px;
-
   &__image {
     width: auto;
     border-radius: 5px;
@@ -17,6 +12,9 @@
 
   &__price-box {
     padding-top: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
   }
 
   &__price {
@@ -25,7 +23,7 @@
     color: #242424;
   }
 
-  &__disount {
+  &__discount {
     font-weight: 400;
     line-height: 1rem;
     font-size: 0.75rem;
@@ -34,6 +32,7 @@
   }
 
   &__old-price {
+    color: rgb(174, 174, 193);
     font-weight: 400;
     line-height: 1rem;
     font-size: 0.75rem;
@@ -41,11 +40,24 @@
   }
 
   &__product-description-box {
-    display: flex;
-    align-items: flex-start;
-    position: relative;
-    overflow: hidden;
     padding-bottom: 10px;
+    padding-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 7%;
+      height: 100%;
+      right: 0;
+      background: linear-gradient(
+        267deg,
+        rgba(255, 255, 255, 0.7567401960784313) 40%,
+        rgba(255, 255, 255, 0.12368697478991597) 100%
+      );
+    }
   }
 
   &__product-brand {
@@ -55,9 +67,11 @@
   }
 
   &__product-name {
+    padding-left: 4px;
     font-weight: 400;
     line-height: 1.25rem;
     font-size: 0.75rem;
+    white-space: nowrap;
   }
 
   &__button {
