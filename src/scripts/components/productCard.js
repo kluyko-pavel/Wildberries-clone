@@ -1,7 +1,6 @@
 export function createProductCard (image, price, oldPrice, productsBrand, productsName) {
   const productCard = document.createElement('div')
   productCard.className = 'product-card'
-  document.querySelector('.product-cards__container').append(productCard)
 
   const productImage = document.createElement('img')
   productImage.className = 'product-card__image'
