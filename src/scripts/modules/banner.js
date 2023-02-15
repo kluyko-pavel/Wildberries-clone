@@ -13,7 +13,7 @@ function dotsActiveClassChange (count) {
 }
 
 function handlerSlideRight () {
-  count = count + 1
+  count = +count + 1
   if (count > sliderImages.length - 1) {
     count = 0
   }
@@ -22,7 +22,7 @@ function handlerSlideRight () {
 }
 
 function handlerSlideLeft () {
-  count = count - 1
+  count = +count - 1
   if (count < 0) {
     count = sliderImages.length - 1
   }
