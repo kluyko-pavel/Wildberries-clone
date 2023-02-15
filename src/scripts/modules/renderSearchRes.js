@@ -16,10 +16,10 @@ function debounce (func, waitTime) {
 }
 
 async function renderSearchResult (event) {
-  const inputText = event.target.value
+  const inputText = event.target.value.trim()
   const res = await fetch(URL)
   const cards = await res.json()
-  if (inputText.trim().length > 0) {
+  if (inputText.length > 0) {
     const searchCards = search(cards, inputText)
     renderCard(searchCards)
     document.querySelector('.product-cards__container').style.maxHeight = 'none'
