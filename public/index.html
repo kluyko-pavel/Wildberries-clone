@@ -28,6 +28,14 @@
               </div>
               <input type="text" class="main-header__search-input" name="search-input" placeholder="Я ищу..." />
             </form>
+            
+            
+            <button type="button" class="main-header__auth" id="modal-btn">
+             <img class="main-header__auth-icon" src="#" alt="">
+              <span class="main-header__auth-caption">Войти</span>
+            </button>
+            
+
             <button type="button" class="main-header__basket">
               <svg
                 class="main-header__basket-img"
@@ -49,6 +57,200 @@
           </div>
         </div>
       </header>
+
+      <section class="basket">
+        <div class="container">
+          <div class="basket-container">
+            <!-- <div class="basket-left-block">
+              <h2 class="basket-left-block__title">Корзина</h2>
+              <div id="active-basket-container" class="basket-items-container">
+                <div class="item-container">
+                  <div class="item-left-container">
+                    <div class="product-card">
+                      <div class="product-card-image">
+                        <img class="product-card-image__icon" src="../src/assets/images/basket/product_1.png" alt="product-image" />
+                      </div>
+                      <div class="product-info">
+                        <h4 class="product-info__name">Футболка UZcotton мужская</h4>
+                        <h5 class="product-info__details">OOO Вайлдберриз</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-right-container">
+                    <div class="product-controls-container">
+                      <div class="product-counter">
+                        <button type="button" disabled="" data-id="1" class="product-counter__minus">−</button>
+                        <div class="product-counter__value">1</div>
+                        <button type="button" data-id="1" class="product-counter__plus">+</button>
+                      </div>
+                      <button class="product-controls-remove" type="button">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="trash"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M0.5 3C0.5 2.72386 0.723858 2.5 1 2.5H15C15.2761 2.5 15.5 2.72386 15.5 3C15.5 3.27614 15.2761 3.5 15 3.5H1C0.723858 3.5 0.5 3.27614 0.5 3Z"
+                            fill="black"
+                          ></path>
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M1.4584 2.5H14.5059L13.6411 13.6926C13.5405 14.9947 12.4546 16 11.1486 16H4.84639C3.54299 16 2.45829 14.9986 2.35435 13.6994L1.4584 2.5ZM2.5416 3.5L3.35117 13.6196C3.41353 14.3992 4.06435 15 4.84639 15H11.1486C11.9322 15 12.5837 14.3968 12.6441 13.6155L13.4256 3.5H2.5416Z"
+                            fill="black"
+                          ></path>
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M11 3.5H5V1.46875C5 0.657582 5.65758 0 6.46875 0H9.53125C10.3424 0 11 0.657582 11 1.46875V3.5ZM6.46875 1C6.20987 1 6 1.20987 6 1.46875V2.5H10V1.46875C10 1.20987 9.79013 1 9.53125 1H6.46875Z"
+                            fill="black"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="product-price-container">
+                      <p class="product-price-new">180 Р</p>
+                      <span class="product-price-old">210 Р</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-container">
+                  <div class="item-left-container">
+                    <div class="product-card">
+                      <div class="product-card-image">
+                        <img class="product-card-image__icon" src="../src/assets/images/basket/product_2.png" alt="product-image" />
+                      </div>
+                      <div class="product-info">
+                        <h4 class="product-info__name">Силиконовый чехол на Apple iPhone XR, MobiSafe</h4>
+                        <h5 class="product-info__details">OOO Вайлдберриз</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-right-container">
+                    <div class="product-controls-container">
+                      <div class="product-counter">
+                        <button type="button" disabled="" data-id="1" class="product-counter__minus">−</button>
+                        <div class="product-counter__value">1</div>
+                        <button type="button" data-id="1" class="product-counter__plus">+</button>
+                      </div>
+                      <div class="product-controls-remove">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="trash"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M0.5 3C0.5 2.72386 0.723858 2.5 1 2.5H15C15.2761 2.5 15.5 2.72386 15.5 3C15.5 3.27614 15.2761 3.5 15 3.5H1C0.723858 3.5 0.5 3.27614 0.5 3Z"
+                            fill="black"
+                          ></path>
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M1.4584 2.5H14.5059L13.6411 13.6926C13.5405 14.9947 12.4546 16 11.1486 16H4.84639C3.54299 16 2.45829 14.9986 2.35435 13.6994L1.4584 2.5ZM2.5416 3.5L3.35117 13.6196C3.41353 14.3992 4.06435 15 4.84639 15H11.1486C11.9322 15 12.5837 14.3968 12.6441 13.6155L13.4256 3.5H2.5416Z"
+                            fill="black"
+                          ></path>
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M11 3.5H5V1.46875C5 0.657582 5.65758 0 6.46875 0H9.53125C10.3424 0 11 0.657582 11 1.46875V3.5ZM6.46875 1C6.20987 1 6 1.20987 6 1.46875V2.5H10V1.46875C10 1.20987 9.79013 1 9.53125 1H6.46875Z"
+                            fill="black"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="product-price-container">
+                      <p class="product-price-new">10 Р</p>
+                      <span class="product-price-old">16 Р</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-container">
+                  <div class="item-left-container">
+                    <div class="product-card">
+                      <div class="product-card-image">
+                        <img class="product-card-image__icon" src="../src/assets/images/basket/product_3.png" alt="product-image" />
+                      </div>
+                      <div class="product-info">
+                        <h4 class="product-info__name">Карандаши цветные Faber-Castell "Замок", набор 24 цвета</h4>
+                        <h5 class="product-info__details">OOO Вайлдберриз</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-right-container">
+                    <div class="product-controls-container">
+                      <div class="product-counter">
+                        <button type="button" disabled="" data-id="1" class="product-counter__minus">−</button>
+                        <div class="product-counter__value">1</div>
+                        <button type="button" data-id="1" class="product-counter__plus">+</button>
+                      </div>
+                      <div class="product-controls-remove">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="trash"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M0.5 3C0.5 2.72386 0.723858 2.5 1 2.5H15C15.2761 2.5 15.5 2.72386 15.5 3C15.5 3.27614 15.2761 3.5 15 3.5H1C0.723858 3.5 0.5 3.27614 0.5 3Z"
+                            fill="black"
+                          ></path>
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M1.4584 2.5H14.5059L13.6411 13.6926C13.5405 14.9947 12.4546 16 11.1486 16H4.84639C3.54299 16 2.45829 14.9986 2.35435 13.6994L1.4584 2.5ZM2.5416 3.5L3.35117 13.6196C3.41353 14.3992 4.06435 15 4.84639 15H11.1486C11.9322 15 12.5837 14.3968 12.6441 13.6155L13.4256 3.5H2.5416Z"
+                            fill="black"
+                          ></path>
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M11 3.5H5V1.46875C5 0.657582 5.65758 0 6.46875 0H9.53125C10.3424 0 11 0.657582 11 1.46875V3.5ZM6.46875 1C6.20987 1 6 1.20987 6 1.46875V2.5H10V1.46875C10 1.20987 9.79013 1 9.53125 1H6.46875Z"
+                            fill="black"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="product-price-container">
+                      <p class="product-price-new">38 Р</p>
+                      <span class="product-price-old">54 Р</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket-right-block">
+              <div class="basket-bg shadow">
+                <div class="total-basket-container">
+                  <h2 class="total-basket-container__title">Итого</h2>
+                  <div class="total-basket-container__products"></div>
+                  <button id="remove-basket" class="remove-btn">Очистить корзину</button>
+                  <button id="pay-button" class="pay-btn">Заказать</button>
+                  <div class="agreement">
+                    <span class="agreement__text">Соглашаюсь</span>
+                    <a class="agreement__rules" href="https://www.wildberries.by/services/terms"
+                      >c правилами пользования торговой площадки</a
+                    >
+                    <a class="agreement__return" href="https://www.wildberries.by/services/item-return">и возврата</a>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
 
       <div class="main-content">
         <section class="banner">

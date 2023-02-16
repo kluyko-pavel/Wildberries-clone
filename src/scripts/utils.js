@@ -6,4 +6,4 @@ export function getLocalStorage () {
   export function setLocalStorage (items = []) {
     localStorage.setItem('key', JSON.stringify(items))
   }
-  
+
