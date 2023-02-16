@@ -1,13 +1,15 @@
 .product-cards {
   padding: 40px 0 56px 0;
+    &__card-container{
+        display: flex;
+        flex-direction: column;
+    }
 
-  &__container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    justify-content: center;
-    gap: 20px;
-    position: relative;
-  }
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+    }
 
   &__tittle {
     font-size: 1.5rem;
