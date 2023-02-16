@@ -57,6 +57,7 @@
     cursor: pointer;
     transition: background 0.3s ease 0s;
     &:focus {
+      cursor: text;
       background-color: #fff;
     }
   }
