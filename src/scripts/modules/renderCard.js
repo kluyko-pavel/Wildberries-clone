@@ -1,9 +1,10 @@
 import { createProductCard } from '../components/index.js'
+const cardsContainer = document.querySelector('.product-cards__container')
 
 export function renderCard (cards) {
-  document.querySelector('.product-cards__container').innerHTML = ''
+  cardsContainer.innerHTML = ''
   cards.forEach(({ image, price, oldPrice, productsBrand, productsName, id }) => {
     const productCard = createProductCard(image, price, oldPrice, productsBrand, productsName, id)
-    document.querySelector('.product-cards__container').append(productCard)
+    cardsContainer.append(productCard)
   })
 }
