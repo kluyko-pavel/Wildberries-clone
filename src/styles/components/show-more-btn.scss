@@ -1,0 +1,19 @@
+.show-more-btn {
+  width: 22%;
+  min-height: 50px;
+  position: absolute;
+  bottom: -70px;
+  left: 39%;
+  color: $main-clr;
+  background-color: #fff;
+  border: 2px solid $main-clr;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  &:hover {
+    border-style: ridge;
+  }
+}
+.show-more-btn.hidden {
+  display: none;
+}

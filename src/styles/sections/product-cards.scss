@@ -1,6 +1,5 @@
 .product-cards {
-    margin-top: 50px;
-
+  padding: 40px 0 56px 0;
     &__card-container{
         display: flex;
         flex-direction: column;
@@ -12,12 +11,11 @@
         gap: 20px;
     }
 
-    &__tittle {
-        font-size: 1.5rem;
-        line-height: 1.7rem;
-        font-weight: 700;
-        color: #242424;
-        padding-bottom: 30px;
-    }
-
+  &__tittle {
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    font-weight: 700;
+    color: #242424;
+    padding-bottom: 30px;
+  }
 }

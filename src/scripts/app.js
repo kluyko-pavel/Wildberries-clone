@@ -1,10 +1,42 @@
-import { addBannerEventListeners, handlerRenderSearchResult, createProductCards, getCurrentProduct } from '../scripts/modules/index.js'
-const cardsContainer = document.querySelector('.product-cards__container')
-const formInput = document.querySelector('.main-header__search-input')
+
+import {
+  addBannerEventListeners,
+  handlerScrollTop,
+  handlerShowScrollButton,
+  handlerShowMore,
+  handlerModal,
+   handlerRenderSearchResult,
+   createProductCards,
+   getCurrentProduct,
+  showCards
+} from '../scripts/modules/index.js'
+import { createPhoneBtn, createTopScrollBtn, createShowMoreBtn, createBasket } from '../scripts/components/index.js'
 
 export function initApp () {
-  createProductCards()
+  const basket = createBasket()
+
+  const basketBtn = document.querySelector('.main-header__basket')
+  basketBtn.addEventListener('click', () => handlerModal(basket))
+
   addBannerEventListeners()
+  
+   createProductCards()
+
+const formInput = document.querySelector('.main-header__search-input')
+formInput.addEventListener('input', handlerRenderSearchResult)
+
+  const cardsContainer = document.querySelector('.product-cards__container')
   cardsContainer.addEventListener('click', getCurrentProduct)
-  formInput.addEventListener('input', handlerRenderSearchResult)
+  const topButton = createTopScrollBtn()
+  const phoneButton = createPhoneBtn()
+  document.documentElement.append(topButton, phoneButton)
+  window.addEventListener('scroll', () => handlerShowScrollButton(topButton))
+  topButton.addEventListener('click', handlerScrollTop)
+
+  const showMoreBtn = createShowMoreBtn()
+  cardsContainer.append(showMoreBtn)
+  const cards = Array.from(document.querySelectorAll('.product-card'))
+  showMoreBtn.addEventListener('click', () => handlerShowMore(showMoreBtn, cards))
+  showCards(showMoreBtn, cards)
+  window.addEventListener('resize', () => showCards(showMoreBtn, cards))
 }
