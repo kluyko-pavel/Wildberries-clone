@@ -71,7 +71,7 @@ export function createAuthorizationWindow() {
 
     const loginLogIn = document.createElement('input')
     loginLogIn.className = 'modal-down__input-log-in'
-    loginLogIn.placeholder = 'Логин'
+    loginLogIn.placeholder = 'Логин' // не отображает и остальные тоже
     loginLogIn.type = 'email'
     formLogIn.append(loginLogIn)
 
