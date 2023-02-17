@@ -8,8 +8,4 @@ export function initApp () {
   addBannerEventListeners()
   // createAuthorizationWindow()
   createOrderingModal()
-  // getLocalStorage()
-  // setLocalStorage()
 }
-
-

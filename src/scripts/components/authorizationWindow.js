@@ -3,7 +3,6 @@
 //     modalOverlay.className = 'modal-overlay'
 //     document.querySelector('.container').append(modalOverlay)
 
-
 //     const modal = document.createElement('div')
 //     modal.className = 'modal'
 //     modalOverlay.append(modal)
@@ -51,12 +50,9 @@
 //     btnAuth.type = 'button'
 //     modalSignIn.append(btnAuth)
 
-
 //     const modalLine = document.createElement('div')
 //     modalLine.className = 'line'
 //     modal.append(modalLine)
-
-
 
 //     const modalLogIn = document.createElement('div')
 //     modalLogIn.className = 'modal-down__log-in'
