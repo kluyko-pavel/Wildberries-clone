@@ -2,18 +2,15 @@ import {
   addBannerEventListeners,
   handlerScrollTop,
   handlerShowScrollButton,
-  handlerShowMore,
   handlerModal,
   handlerRenderSearchResult,
   createProductCards,
-  getCurrentProduct,
-  showCards
+  getCurrentProduct
 } from '../scripts/modules/index.js'
-import { createPhoneBtn, createTopScrollBtn, createShowMoreBtn, createBasket } from '../scripts/components/index.js'
+import { createPhoneBtn, createTopScrollBtn, createBasket } from '../scripts/components/index.js'
 
 export function initApp () {
   const basket = createBasket()
-
   const basketBtn = document.querySelector('.main-header__basket')
   basketBtn.addEventListener('click', () => handlerModal(basket))
 
@@ -31,11 +28,4 @@ export function initApp () {
   document.documentElement.append(topButton, phoneButton)
   window.addEventListener('scroll', () => handlerShowScrollButton(topButton))
   topButton.addEventListener('click', handlerScrollTop)
-
-  const showMoreBtn = createShowMoreBtn()
-  cardsContainer.append(showMoreBtn)
-
-  showCards(showMoreBtn)
-  showMoreBtn.addEventListener('click', () => handlerShowMore(showMoreBtn))
-  window.addEventListener('resize', () => showCards(showMoreBtn))
 }

@@ -1,10 +1,9 @@
-export async function showCards (showMoreBtn) {
-  const cards = Array.from(document.querySelectorAll('.productCard'))
+export function showCards (showMoreBtn, cards) {
   showMoreBtn.classList.add('hidden')
   if (window.innerWidth > 1043) {
     cards.forEach((item, index) => {
       item.classList.add('hidden')
-      if (index <= 14) {
+      if (index <= 17) {
         item.classList.remove('hidden')
       } else {
         showMoreBtn.classList.remove('hidden')
@@ -31,8 +30,8 @@ export async function showCards (showMoreBtn) {
   }
 }
 
-export async function handlerShowMore (showMoreBtn) {
-  const cards = Array.from(document.querySelectorAll('.productCard'))
+export function handlerShowMore (showMoreBtn, cards) {
+  showMoreBtn.classList.add('hidden')
   cards.forEach((item) => item.classList.remove('hidden'))
   showMoreBtn.classList.add('hidden')
 }
