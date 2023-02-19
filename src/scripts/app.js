@@ -2,17 +2,16 @@ import {
   addBannerEventListeners,
   handlerScrollTop,
   handlerShowScrollButton,
-  handlerModal,
   handlerRenderSearchResult,
   createProductCards,
-  getCurrentProduct
+  handlerGetCurrentProduct,
+  basketFilling
 } from '../scripts/modules/index.js'
-import { createPhoneBtn, createTopScrollBtn, createBasket } from '../scripts/components/index.js'
+import { createPhoneBtn, createTopScrollBtn } from '../scripts/components/index.js'
 
 export function initApp () {
-  const basket = createBasket()
   const basketBtn = document.querySelector('.main-header__basket')
-  basketBtn.addEventListener('click', () => handlerModal(basket))
+  basketBtn.addEventListener('click', basketFilling)
 
   addBannerEventListeners()
 
@@ -22,7 +21,8 @@ export function initApp () {
   formInput.addEventListener('input', handlerRenderSearchResult)
 
   const cardsContainer = document.querySelector('.product-cards__container')
-  cardsContainer.addEventListener('click', getCurrentProduct)
+  cardsContainer.addEventListener('click', handlerGetCurrentProduct)
+
   const topButton = createTopScrollBtn()
   const phoneButton = createPhoneBtn()
   document.documentElement.append(topButton, phoneButton)

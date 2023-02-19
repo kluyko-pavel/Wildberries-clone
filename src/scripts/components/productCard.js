@@ -1,4 +1,4 @@
-export function createProductCard (image, price, oldPrice, productsBrand, productsName, id) {
+export function createProductCard (image, price, oldPrice, productsBrand, productsName, id, inBasket) {
   const productCard = document.createElement('div')
   productCard.className = 'product-card'
 
@@ -44,9 +44,14 @@ export function createProductCard (image, price, oldPrice, productsBrand, produc
   const basketButton = document.createElement('button')
   basketButton.className = 'product-card__button'
   basketButton.id = `${id}`
+  basketButton.disabled = inBasket
   basketButton.type = 'button'
   basketButton.innerText = 'В корзину'
   productCard.append(basketButton)
+  if (inBasket) {
+    basketButton.innerText = 'Товар добавлен в корзину'
+    basketButton.style.backgroundColor = 'rgba(74, 209, 97, 0.897)'
+  }
 
   return productCard
 }
