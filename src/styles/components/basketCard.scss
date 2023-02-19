@@ -1,0 +1,150 @@
+.basketCard {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  padding: 10px;
+  justify-content: space-between;
+  max-width: 45%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.content-block {
+  display: flex;
+  flex-direction: row;
+}
+
+.basket-item {
+  display: flex;
+  flex-direction: row;
+  max-width: 330px;
+}
+
+.basket-item-image {
+  width: 72px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex: 0 0 auto;
+}
+
+.basket-item-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 14px;
+}
+
+.basket-item-info__name {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.basket-item-info__details {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #a0a0a4;
+  margin-bottom: 4px;
+}
+
+.price-block {
+  display: flex;
+  flex-direction: row;
+  max-width: 226px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.basket-item-controls-container {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+}
+
+.basket-item-controls-container .basket-item-counter {
+  width: 100px;
+  height: 44px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #f6f6fa;
+}
+
+.basket-item-counter__minus {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+}
+
+.basket-item-counter__value {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 15px;
+}
+
+.basket-item-counter__plus {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+}
+
+.basket-item-controls-remove {
+  margin-top: 8px;
+  align-self: center;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.trash {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.trash:hover {
+  opacity: 1;
+}
+
+.basket-item-price-container {
+  display: flex;
+  align-self: flex-start;
+  justify-content: flex-end;
+  margin-left: 10px;
+  flex-direction: column;
+}
+
+.basket-item-price-new {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.basket-item-price-old {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #a0a0a4;
+  text-align: right;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+  text-decoration: line-through;
+  width: fit-content;
+  align-self: flex-end;
+  margin-top: 6px;
+}
