@@ -1,54 +1,51 @@
 export function createOrderingModal () {
-  const modalOverlayOrder = document.createElement('div')
-  modalOverlayOrder.className = 'modal-overlay-order'
-  document.querySelector('.container').append(modalOverlayOrder)
-
   const modalOrder = document.createElement('div')
   modalOrder.className = 'modal-order'
-  modalOverlayOrder.append(modalOrder)
 
-  const SignInNumber = document.createElement('div')
-  SignInNumber.className = 'modal__box'
-  modalOrder.append(SignInNumber)
+  const btnClose = document.createElement('button')
+  btnClose.className = 'close-modal'
+  btnClose.type = 'button'
+  modalOrder.append(btnClose)
 
-  const orderText = document.createElement('h2')
-  orderText.className = 'modal__order-text'
-  orderText.innerText = 'Оформление заказа'
-  modalOrder.append(orderText)
+  const btnCross = document.createElement('span')
+  btnCross.className = 'close-modal-cross'
+  btnClose.append(btnCross)
+
+  const orderTitle = document.createElement('h2')
+  orderTitle.className = 'modal-order__title'
+  orderTitle.innerText = 'Оформление заказа'
+  modalOrder.append(orderTitle)
 
   const orderInfo = document.createElement('h5')
-  orderInfo.className = 'modal__order-info'
+  orderInfo.className = 'modal-order__info'
   orderInfo.innerText = 'Контактный телефон'
   modalOrder.append(orderInfo)
 
   const orderForm = document.createElement('form')
-  orderForm.className = 'modal__order-form'
+  orderForm.className = 'modal-order__form'
   orderForm.action = '#'
   orderForm.name = 'order-form'
   modalOrder.append(orderForm)
 
-  const modalNumb = document.createElement('input')
-  modalNumb.className = 'modal__input-number'
-  modalNumb.placeholder = '29 0000 000'
-  modalNumb.name = 'order-input-tel'
-  modalNumb.type = 'tel'
-  // modalNumb.pattern = '29 XXXX XXX'
-  modalNumb.setAttribute('maxlength', '18')
-  modalNumb.setAttribute('required', '')
-  orderForm.append(modalNumb)
+  const phoneNumberInput = document.createElement('input')
+  phoneNumberInput.className = 'modal-order__input-phone-num'
+  phoneNumberInput.placeholder = 'Телефон'
+  phoneNumberInput.name = 'order-input-tel'
+  phoneNumberInput.type = 'tel'
+  phoneNumberInput.setAttribute('maxlength', '18')
+  phoneNumberInput.setAttribute('required', '')
+  orderForm.append(phoneNumberInput)
 
   const btnAccept = document.createElement('button')
-  btnAccept.className = 'modal__btn-accept'
+  btnAccept.className = 'modal-order__btn-accept'
   btnAccept.innerText = 'Оформить заказ'
   btnAccept.type = 'submit'
   orderForm.append(btnAccept)
 
   const modalTerms = document.createElement('p')
-  modalTerms.className = 'modal__terms'
+  modalTerms.className = 'modal-order__terms'
+  modalTerms.innerText = 'Согласен с условиями Правил пользования торговой площадкой и правилами возврата'
   modalOrder.append(modalTerms)
 
-  const termsText = document.createElement('span')
-  termsText.className = 'modal__terms-text'
-  termsText.innerHTML = 'Согласен с условиями Правил пользования <br> торговой площадкой и правилами возврата'
-  modalTerms.append(termsText)
+  return modalOrder
 }
