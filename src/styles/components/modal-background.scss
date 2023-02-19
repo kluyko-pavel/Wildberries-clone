@@ -9,4 +9,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  animation-name: animate;
+  animation-duration: 0.3s;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
