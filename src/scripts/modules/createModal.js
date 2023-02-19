@@ -1,6 +1,6 @@
 import { createModalBackground } from '../components/index.js'
 
-function handlerCloseModal (event) {
+export function handlerCloseModal (event) {
   event.target.closest('.modal-background').remove()
   document.body.style.overflowY = ''
 }
