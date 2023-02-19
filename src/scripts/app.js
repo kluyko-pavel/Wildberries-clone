@@ -8,11 +8,14 @@ import {
   getCurrentProduct
 } from '../scripts/modules/index.js'
 import { createPhoneBtn, createTopScrollBtn, createBasket } from '../scripts/components/index.js'
+// import { createOrderingModal } from './components/ordering.js'
 
 export function initApp () {
   const basket = createBasket()
   const basketBtn = document.querySelector('.main-header__basket')
   basketBtn.addEventListener('click', () => handlerModal(basket))
+
+  // createOrderingModal()
 
   addBannerEventListeners()
 
