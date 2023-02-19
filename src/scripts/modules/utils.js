@@ -1,11 +1,11 @@
-export function getDataLocalStorage () {
-  if (localStorage.getItem('cards')) {
-    return JSON.parse(localStorage.getItem('cards'))
+export function getDataLocalStorage (key) {
+  if (localStorage.getItem(key)) {
+    return JSON.parse(localStorage.getItem(key))
   } else {
     return []
   }
 }
 
-export function setDataLocalStorage (data) {
-  localStorage.setItem('cards', JSON.stringify(data))
+export function setDataLocalStorage (key, array) {
+  localStorage.setItem(key, JSON.stringify(array))
 }

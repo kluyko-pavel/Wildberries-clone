@@ -1,6 +1,6 @@
 import { createModalBackground } from '../components/index.js'
 
-function handlerCloseModal () {
+export function handlerCloseModal () {
   const modal = document.querySelector('.modal-background')
   modal.remove()
   document.body.style.overflowY = ''

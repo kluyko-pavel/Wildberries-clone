@@ -1,6 +1,7 @@
-export function createBasket () {
+export function createBasket (totalPrice) {
   const basketWrapper = document.createElement('div')
   basketWrapper.className = 'basket-wrapper'
+  document.body.append(basketWrapper)
 
   const basketCloseBtn = document.createElement('button')
   basketCloseBtn.className = 'close-modal'
@@ -43,7 +44,7 @@ export function createBasket () {
 
   const totalCost = document.createElement('h2')
   totalCost.className = 'total-window__header-total-cost'
-  totalCost.innerText = '10000'
+  totalCost.innerText = `${totalPrice}`
   totalWindowHeader.append(totalCost)
 
   const removeBasketBtn = document.createElement('button')
