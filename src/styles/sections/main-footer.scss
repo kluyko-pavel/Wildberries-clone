@@ -122,3 +122,49 @@
   line-height: 20px;
   color: rgba(255, 255, 255, 0.7);
 }
+
+
+@media (max-width: 768px) {
+  .footer-col:last-child {
+    display: none;
+  }
+  .row {
+  padding: 0 50px 50px 0;
+}
+}
+
+@media (max-width: 320px) {
+
+  .main-footer {
+    padding: 20px 0;
+  }
+
+  .row {
+    padding: 0 0;
+    flex-direction: column;
+  }
+
+  .footer-col {
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-col__title {
+    position: absolute; 
+  }
+
+  .footer-col__title::before {
+    position: absolute;
+  }
+
+  .footer-col__contact-info-items {
+    text-align: center;
+    position: relative;
+    top: 50px;
+  }
+
+  .footer-copyright-text {
+    margin: 70px 0 10px 0;
+  }
+}
