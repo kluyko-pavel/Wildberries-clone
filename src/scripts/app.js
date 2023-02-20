@@ -10,7 +10,6 @@ import {
 import {
   createPhoneBtn,
   createTopScrollBtn,
-  createShowMoreBtn,
   createBasket,
   createBasketCard
 } from '../scripts/components/index.js'

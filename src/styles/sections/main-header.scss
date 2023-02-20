@@ -16,22 +16,24 @@
 
   &__content {
     display: flex;
-    gap: 40px;
+    gap: 20px;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
   }
 
   &__logo {
-    width: 25%;
-    margin-right: 60px;
+    // margin-right: 60px;
+  }
+
+  &__logo-icon-svg {
   }
 
   &__search-form {
-    width: 100%;
     position: relative;
     margin: 15px 0;
     border-radius: 56px;
+    width: 65%;
     background: rgba(255, 255, 255, 0.2);
     transition: background 0.3s ease 0s;
     &:hover {
@@ -43,13 +45,17 @@
     z-index: 1;
     top: 25%;
     left: 0;
+    opacity: 0.5;
+    cursor: pointer;
+    margin-left: 20px;
   }
+
   &__search-input {
     position: relative;
     padding: 16px 20px 16px 52px;
-    width: 100%;
     background: none;
     border-radius: 56px;
+    width: 80%;
     outline: none;
     border-style: none;
     font-size: 18px;
@@ -63,7 +69,10 @@
   }
 
   &__basket {
-    margin-left: 60px;
+    // margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: rgba(255, 255, 255, 0.6);
     font-size: 14px;
     text-align: center;
@@ -76,7 +85,8 @@
     }
   }
   &__basket-img {
-    margin-bottom: 5px;
+    margin-bottom: 7px;
+    align-self: center;
   }
   &__auth {
     color: rgba(255, 255, 255, 0.6);
@@ -100,4 +110,65 @@ input::placeholder {
   color: rgba(255, 255, 255, 0.5);
   font-size: 18px;
   line-height: 22px;
+}
+
+@media (max-width: 414px) {
+  .main-header__search-form {
+    margin: 10px 0;
+  }
+  .main-header__search-form-icon {
+    margin-left: 14px;
+  }
+  .main-header__search-input {
+    padding: 16px 10px 16px 42px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 390px) {
+  .main-header__search-form {
+    display: inline-flex;
+    flex-shrink: 2;
+    order: -1;
+    background: none;
+  }
+  // .main-header__search-form-icon {
+  //   margin-left: 7px;
+  // }
+  .main-header__search-form-icon-svg {
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+  }
+  .main-header__search-input {
+    width: 60%;
+  }
+}
+
+@media (max-width: 320px) {
+  .main-header__content {
+    gap: 10px;
+  }
+  .main-header__logo {
+    padding-right: 10px;
+  }
+  .main-header__search-form {
+    margin: 0;
+  }
+  .main-header__search-form-icon {
+    margin-left: 5px;
+  }
+  .main-header__search-form-icon-svg {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+  }
+  .main-header__basket-img {
+    margin-bottom: 2px;
+    width: 24px;
+    height: 24px;
+  }
+  .main-header__basket-caption {
+    display: none;
+  }
 }
