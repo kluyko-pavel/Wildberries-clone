@@ -1,6 +1,6 @@
 import trashIcon from '../../assets/icons/trash.svg'
 
-export function createBasketCard (image, price, oldPrice, productsBrand, productsName, id) {
+export function createBasketCard (image, price, oldPrice, productsBrand, productsName, id, counter = 1) {
   const basketCard = document.createElement('div')
   basketCard.className = 'basket-card'
   basketCard.id = `${id}`
@@ -50,10 +50,11 @@ export function createBasketCard (image, price, oldPrice, productsBrand, product
   counterBtnMinus.type = 'button'
   counterBtnMinus.innerText = '−'
   basketItemCounter.append(counterBtnMinus)
+  if (counter === 1) counterBtnMinus.disabled = true
 
   const counterValue = document.createElement('div')
   counterValue.className = 'basket-card-controls__item-counter-value'
-  counterValue.innerText = '1'
+  counterValue.innerText = `${counter}`
   basketItemCounter.append(counterValue)
 
   const counterBtnPlus = document.createElement('button')

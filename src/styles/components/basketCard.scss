@@ -67,6 +67,10 @@
     height: 24px;
     border: none;
     background-color: transparent;
+    &:disabled{
+      color: #c2b7b7;
+      cursor:no-drop;
+    }
   }
   &__item-counter-value {
     font-weight: 500;

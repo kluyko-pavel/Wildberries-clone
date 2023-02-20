@@ -26,7 +26,7 @@ export function createBasket (totalPrice) {
   basketWindowHeader.append(basketTitle)
 
   const basketCardsContainer = document.createElement('div')
-  basketCardsContainer.className = 'basket-window_cards-container'
+  basketCardsContainer.className = 'basket-window__cards-container'
   basketWindow.append(basketCardsContainer)
 
   const totalWindow = document.createElement('div')

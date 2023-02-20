@@ -6,14 +6,15 @@ import {
   createProductCards,
   handlerGetCurrentProduct,
   basketFilling,
-  handlerModal
+  handlerModal,
+  basketProductsCounter
 } from '../scripts/modules/index.js'
 import { createPhoneBtn, createTopScrollBtn } from '../scripts/components/index.js'
 
 export function initApp () {
   const basketBtn = document.querySelector('.main-header__basket')
   basketBtn.addEventListener('click', () => handlerModal(basketFilling()))
-
+  basketProductsCounter()
   addBannerEventListeners()
 
   createProductCards()
