@@ -136,3 +136,119 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 824px) {
+  .basket-wrapper {
+    background-color: #fff;
+    flex-basis: 1223px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 54px;
+    justify-content: center;
+    padding: 60px 10px;
+    position: relative;
+    transition: 0.8s;
+  }
+  .basket-window {
+    position: relative;
+    flex-basis: 776px;
+    max-height: 400px;
+    min-height: 300px;
+    padding: 17px 25px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation-name: animateleft;
+    animation-duration: 0.7s;
+    &__header {
+      padding-bottom: 10px;
+    }
+    &__header-title {
+      position: relative;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 36px;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #e9e6e6;
+      }
+    }
+    &__cards-container {
+      overflow-y: scroll;
+    }
+  }
+  .total-window {
+    position: relative;
+    flex-basis: 313px;
+    max-height: 219px;
+    padding: 17px 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation-name: animateright;
+    animation-duration: 0.7s;
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #e9e6e6;
+      }
+    }
+    &__header-title {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 36px;
+    }
+    &__header-total-cost {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 36px;
+    }
+    &__remove-btn {
+      width: 90%;
+      min-height: 50px;
+      color: $main-clr;
+      background-color: #fff;
+      border: 2px solid $main-clr;
+      border-radius: 8px;
+      margin-top: 28px;
+      transition: 0.2s;
+      padding: 3px;
+      &:hover {
+        border: 2px solid #e313ba;
+        color: #e313ba;
+      }
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+    &__order-btn {
+      width: 90%;
+      min-height: 50px;
+      color: #fff;
+      display: block;
+      margin-top: 15px;
+      background: $main-clr;
+      border-radius: 6px;
+      border: none;
+      transition: 0.2s;
+      &:hover {
+        background-color: #e313ba;
+      }
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+}

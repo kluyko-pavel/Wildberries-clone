@@ -44,7 +44,7 @@ export function createBasket (totalPrice) {
 
   const totalCost = document.createElement('h2')
   totalCost.className = 'total-window__header-total-cost'
-  totalCost.innerText = `${totalPrice}`
+  totalCost.innerText = `${totalPrice} ₽`
   totalWindowHeader.append(totalCost)
 
   const removeBasketBtn = document.createElement('button')
