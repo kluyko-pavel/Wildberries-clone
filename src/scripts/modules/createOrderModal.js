@@ -1,5 +1,6 @@
 import { createErrorOrderingModal, createOrderingModal, createSuccessOrderingModal } from '../components/index.js'
 import { createProductCards, handlerCloseModal, basketProductsCounter } from './index.js'
+import { getDataLocalStorage } from './utils.js'
 
 function getInputNumbersValue (input) {
   return input.value.replace(/\D/g, '')
@@ -64,7 +65,7 @@ function onPhoneKeyDown (event) {
 }
 
 export function orderModal () {
-  if (localStorage.getItem('cards')) {
+  if (getDataLocalStorage('cards').length) {
     const orderModal = createOrderingModal()
     document.addEventListener('click', (event) => {
       if (event.target.matches('.modal-order__input-phone-num')) {

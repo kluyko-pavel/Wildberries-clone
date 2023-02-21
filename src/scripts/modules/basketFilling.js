@@ -18,11 +18,9 @@ export async function handlerClearBasket () {
     localStorage.clear()
     createProductCards()
     basketProductsCounter()
-    const totalPrice = 0
-    modalBackground.append(createBasket(totalPrice))
+    modalBackground.append(basketFilling())
     const closeModal = document.querySelector('.close-modal')
     closeModal.addEventListener('click', (event) => handlerCloseModal(event))
-    document.querySelector('.total-window__order-btn').addEventListener('click', () => handlerModal(orderModal()))
   }
 }
 

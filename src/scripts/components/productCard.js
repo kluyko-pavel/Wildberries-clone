@@ -9,9 +9,13 @@ export function createProductCard (image, price, oldPrice, productsBrand, produc
   productImage.src = `${image}`
   productCard.append(productImage)
 
+  const productInfo = document.createElement('div')
+  productInfo.className = 'product-card__info-wrapper'
+  productCard.append(productInfo)
+
   const priceBox = document.createElement('div')
   priceBox.className = 'product-card__price-box'
-  productCard.append(priceBox)
+  productInfo.append(priceBox)
 
   const productPrice = document.createElement('span')
   productPrice.className = 'product-card__price'
@@ -30,7 +34,7 @@ export function createProductCard (image, price, oldPrice, productsBrand, produc
 
   const productDescription = document.createElement('div')
   productDescription.className = 'product-card__product-description-box'
-  productCard.append(productDescription)
+  productInfo.append(productDescription)
 
   const productBrand = document.createElement('span')
   productBrand.className = 'product-card__product-brand'
@@ -48,9 +52,9 @@ export function createProductCard (image, price, oldPrice, productsBrand, produc
   basketButton.disabled = inBasket
   basketButton.type = 'button'
   basketButton.innerText = 'В корзину'
-  productCard.append(basketButton)
+  productInfo.append(basketButton)
   if (inBasket) {
-    basketButton.innerText = 'Товар добавлен в корзину'
+    basketButton.innerText = 'Товар в корзине'
     basketButton.style.backgroundColor = 'rgba(74, 209, 97, 0.897)'
   }
 

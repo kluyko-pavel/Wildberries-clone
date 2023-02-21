@@ -1,14 +1,20 @@
 .product-card {
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &:hover {
+    box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+    padding: 10px;
+    transform: scale(1.1);
+    border-radius: 8px;
+  }
   &__image {
     width: auto;
     object-fit: contain;
     border-radius: 5px;
     transition: 0.3s;
     cursor: pointer;
-
-    &:hover {
-      transform: scale(1.15);
-    }
   }
 
   &__price-box {

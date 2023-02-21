@@ -17,3 +17,18 @@
 .show-more-btn.hidden {
   display: none;
 }
+
+@media (max-width: 679px) {
+  .show-more-btn {
+    width: 40%;
+    min-height: 40px;
+    left: 32%;
+  }
+}
+
+@media (max-width: 402px) {
+  .show-more-btn {
+    width: 60%;
+    left: 20%;
+  }
+}

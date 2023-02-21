@@ -15,7 +15,9 @@ import { createPhoneBtn, createTopScrollBtn } from '../scripts/components/index.
 export function initApp () {
   const basketBtn = document.querySelector('.main-header__basket')
   basketBtn.addEventListener('click', () => handlerModal(basketFilling()))
+
   basketProductsCounter()
+
   addBannerEventListeners()
 
   createProductCards()

@@ -20,3 +20,14 @@
     padding-bottom: 30px;
   }
 }
+@media (max-width: 500px) {
+  .product-cards__container {
+    grid-template-columns: repeat(auto-fit, minmax(147px, 1fr));
+  }
+}
+@media (max-width: 377px) {
+  .product-cards__container {
+    grid-template-columns: repeat(auto-fit, minmax(138px, 210px));
+    justify-content: center;
+  }
+}

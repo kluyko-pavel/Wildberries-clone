@@ -13,12 +13,10 @@
     top: -1px;
   }
 }
-
 .row {
   display: flex;
   justify-content: space-between;
 }
-
 .footer-col {
   &:nth-child(odd) {
     width: 17%;
@@ -104,7 +102,6 @@
       background-color: rgba(0, 0, 0, 0.4);
     }
   }
-
   &__app-link--huawei {
     background-color: #c8102e;
     &:hover {
@@ -127,7 +124,6 @@
   .footer-col:last-child {
     display: none;
   }
-
   .row {
     padding: 0 50px 50px 0;
   }
@@ -137,42 +133,36 @@
   .main-footer {
     padding: 20px 0;
   }
-
   .row {
     padding: 0 0;
     flex-direction: column;
   }
-
   .footer-col {
     width: 200px;
     text-align: center;
     margin: 50px auto;
-
     &:nth-child(odd) {
       width: 200px;
     }
-  }
+    &__title {
+      display: flex;
+      flex-direction: column;
 
-  .footer-col__title {
-    display: flex;
-    flex-direction: column;
-
-    &::before {
-      content: '';
-      position: absolute;
-      left: 38%;
-      bottom: -10px;
-      background-color: #e91e63;
-      height: 2px;
-      width: 50px;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 38%;
+        bottom: -10px;
+        background-color: #e91e63;
+        height: 2px;
+        width: 50px;
+      }
+    }
+    &__contact-info-items {
+      display: flex;
+      flex-direction: column;
     }
   }
-
-  .footer-col__contact-info-items {
-    display: flex;
-    flex-direction: column;
-  }
-
   .footer-copyright-text {
     max-width: 300px;
     margin: 0 auto;

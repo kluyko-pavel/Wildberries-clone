@@ -21,7 +21,7 @@ export function showCards (showMoreBtn, cards) {
   } else {
     cards.forEach((item, index) => {
       item.classList.add('hidden')
-      if (index <= 2) {
+      if (index <= 3) {
         item.classList.remove('hidden')
       } else {
         showMoreBtn.classList.remove('hidden')

@@ -25,6 +25,9 @@ export function handlerDeleteCurrentProductFromBasket (event) {
     const modalBackground = document.querySelector('.modal-background')
     modalBackground.innerHTML = ''
     modalBackground.append(basketFilling())
+    if (!getDataLocalStorage('cards').length) {
+      localStorage.clear()
+    }
     const closeModal = document.querySelector('.close-modal')
     closeModal.addEventListener('click', (event) => handlerCloseModal(event))
   }

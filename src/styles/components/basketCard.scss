@@ -5,11 +5,17 @@
   padding: 10px;
   max-width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  @media (max-width: 500px) {
+    padding: 10px 0;
+  }
 }
 
 .basket-card-content-block {
   display: flex;
   max-width: 330px;
+  @media (max-width: 954px) {
+    max-width: 200px;
+  }
   &__image {
     width: 72px;
     height: 96px;
@@ -43,12 +49,21 @@
   flex-basis: 226px;
   justify-content: space-between;
   margin-left: 10px;
+  @media (max-width: 500px) {
+    flex-direction: column;
+    flex-basis: auto;
+  }
 }
 
 .basket-card-controls {
   display: flex;
   flex-direction: column;
   flex-basis: 100px;
+  @media (max-width: 500px) {
+    flex-basis: auto;
+    width: 100px;
+    align-self: flex-end;
+  }
   &__item-counter {
     width: 100%;
     height: 44px;
@@ -67,9 +82,9 @@
     height: 24px;
     border: none;
     background-color: transparent;
-    &:disabled{
+    &:disabled {
       color: #c2b7b7;
-      cursor:no-drop;
+      cursor: no-drop;
     }
   }
   &__item-counter-value {
@@ -107,10 +122,18 @@
   align-self: flex-start;
   justify-content: flex-end;
   margin-left: 10px;
+  @media (max-width: 500px) {
+    align-self: flex-end;
+    margin: 10px 20px 0 0;
+  }
   &__new-price {
     font-size: 28px;
     font-weight: 700;
     line-height: 28px;
+    @media (max-width: 824px) {
+      font-size: 18px;
+      line-height: 20px;
+    }
   }
   &__old-price {
     font-weight: 400;
