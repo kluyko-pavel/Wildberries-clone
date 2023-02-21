@@ -14,7 +14,6 @@ export function basketFilling () {
   document.querySelector('.basket-window__cards-container').addEventListener('click', handlerChangeCardsInBasketQuantity)
   const deleteButton = document.querySelector('.total-window__remove-btn')
   deleteButton.addEventListener('click', handlerClearBasket)
-  // document.querySelector('.total-window__order-btn').addEventListener('click', () => handlerModal(modalOrder))
   document.querySelector('.total-window__order-btn').addEventListener('click', () => handlerModal(modalOrder))
   return result
 }
