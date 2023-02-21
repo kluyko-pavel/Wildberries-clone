@@ -75,10 +75,30 @@
     background-color: transparent;
     outline: none;
     border: none;
+    position: relative;
     &:hover {
       color: #fff;
     }
   }
+  &__basket-product-counter{
+    display: none;
+    background-color: rgb(242,80,37);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 60%;
+  }
+
+  &__basket-product-count{
+    position: absolute;
+    left: 4px;
+    top: 1.5px;
+    font-size: 10px;
+  }
+
   &__basket-img {
     margin-bottom: 7px;
     align-self: center;
