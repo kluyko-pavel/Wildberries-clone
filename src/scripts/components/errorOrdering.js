@@ -11,15 +11,15 @@ export function createErrorOrderingModal () {
   btnCross.className = 'close-modal-cross'
   btnClose.append(btnCross)
 
-  const orderTitle = document.createElement('h2')
-  orderTitle.className = 'modal-order__title'
-  orderTitle.innerText = 'В корзине пока пусто'
-  errorModalOrder.append(orderTitle)
+  const errorOrderTitle = document.createElement('h2')
+  errorOrderTitle.className = 'modal-order__title'
+  errorOrderTitle.innerText = 'В корзине пока пусто'
+  errorModalOrder.append(errorOrderTitle)
 
-  const orderInfo = document.createElement('h5')
-  orderInfo.className = 'modal-order__info'
-  orderInfo.innerText = 'Загляните на главную, чтобы выбрать товары или найдите нужное в поиске'
-  errorModalOrder.append(orderInfo)
+  const errorOrderInfo = document.createElement('h5')
+  errorOrderInfo.className = 'modal-order__info'
+  errorOrderInfo.innerText = 'Загляните на главную, чтобы выбрать товары или найдите нужное в поиске'
+  errorModalOrder.append(errorOrderInfo)
 
   return errorModalOrder
 }

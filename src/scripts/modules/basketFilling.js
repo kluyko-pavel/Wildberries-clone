@@ -1,9 +1,7 @@
 import { getDataLocalStorage } from './utils.js'
 import { createBasket } from '../components'
 import { handlerModal, handlerCloseModal } from './createModal.js'
-import { createProductCards } from './index.js'
-import { createOrderingModal } from '../components/ordering.js'
-import { createErrorOrderingModal } from '../components/errorOrdering.js'
+import { createProductCards, orderModal } from './index.js'
 
 export async function handlerClearBasket () {
   const modalBackground = document.querySelector('.modal-background')
@@ -19,21 +17,13 @@ export async function handlerClearBasket () {
   }
 }
 
-function orderModal () {
-  if (localStorage.getItem('cards')) {
-    const orderModal = createOrderingModal()
-    return orderModal
-  } else {
-    const errorOrder = createErrorOrderingModal()
-    return errorOrder
-  }
-}
 export function basketFilling () {
   const addedToBasketCards = getDataLocalStorage('cards')
   const totalPrice = addedToBasketCards.reduce((acc, number) => acc + number.price, 0)
   const result = createBasket(totalPrice)
   const delButt = document.querySelector('.total-window__remove-btn')
   delButt.addEventListener('click', handlerClearBasket)
-  document.querySelector('.total-window__order-btn').addEventListener('click', () => handlerModal(orderModal()))
+  const orderButt = document.querySelector('.total-window__order-btn')
+  orderButt.addEventListener('click', () => handlerModal(orderModal()))
   return result
 }
