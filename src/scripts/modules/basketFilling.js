@@ -1,7 +1,9 @@
 import { getDataLocalStorage } from './utils.js'
 import { createBasket } from '../components'
 import { handlerModal, handlerCloseModal } from './createModal.js'
-import { createProductCards, orderModal } from './index.js'
+
+import { createProductCards, handlerChangeCardsInBasketQuantity, renderCardsInBasket, handlerDeleteCurrentProductFromBasket, basketProductsCounter, orderModal } from './index.js'
+import { createOrderingModal } from '../components/ordering.js'
 
 export async function handlerClearBasket () {
   const modalBackground = document.querySelector('.modal-background')
@@ -21,9 +23,14 @@ export function basketFilling () {
   const addedToBasketCards = getDataLocalStorage('cards')
   const totalPrice = addedToBasketCards.reduce((acc, number) => acc + number.price, 0)
   const result = createBasket(totalPrice)
+  renderCardsInBasket(addedToBasketCards)
+  document.querySelector('.basket-window__cards-container').addEventListener('click', handlerDeleteCurrentProductFromBasket)
+  document.querySelector('.basket-window__cards-container').addEventListener('click', handlerChangeCardsInBasketQuantity)
   const delButt = document.querySelector('.total-window__remove-btn')
   delButt.addEventListener('click', handlerClearBasket)
   const orderButt = document.querySelector('.total-window__order-btn')
   orderButt.addEventListener('click', () => handlerModal(orderModal()))
   return result
 }
+
+

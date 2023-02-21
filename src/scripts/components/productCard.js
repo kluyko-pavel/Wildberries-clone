@@ -5,6 +5,7 @@ export function createProductCard (image, price, oldPrice, productsBrand, produc
   const productImage = document.createElement('img')
   productImage.className = 'product-card__image'
   productImage.alt = 'product image'
+  productImage.id = `${id}`
   productImage.src = `${image}`
   productCard.append(productImage)
 
