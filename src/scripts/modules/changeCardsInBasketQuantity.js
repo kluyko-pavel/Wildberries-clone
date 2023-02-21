@@ -1,8 +1,8 @@
 import { getDataLocalStorage, setDataLocalStorage } from './utils'
 
 import { renderCardsInBasket } from './renderCardInbasket'
-import { handlerModal } from './createModal'
 import { basketFilling } from './basketFilling'
+import { handlerCloseModal } from './createModal'
 
 export function handlerChangeCardsInBasketQuantity (event) {
   const currentProduct = event.target.closest('.basket-card')
@@ -44,6 +44,9 @@ export function handlerChangeCardsInBasketQuantity (event) {
 function refreshBasket (cardsWithChangedCost) {
   setDataLocalStorage('cards', cardsWithChangedCost)
   renderCardsInBasket(cardsWithChangedCost)
-  document.querySelector('.modal-background').remove()
-  handlerModal(basketFilling())
+  const modalBackground = document.querySelector('.modal-background')
+  modalBackground.innerHTML = ''
+  modalBackground.append(basketFilling())
+  const closeModal = document.querySelector('.close-modal')
+  closeModal.addEventListener('click', (event) => handlerCloseModal(event))
 }

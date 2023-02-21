@@ -1,8 +1,7 @@
 import { getDataLocalStorage, setDataLocalStorage } from './utils'
-
+import { handlerCloseModal } from './createModal'
 import { renderCardsInBasket } from './renderCardInbasket'
 import { createProductCards } from './createProductCards'
-import { handlerModal } from './createModal'
 import { basketFilling } from './basketFilling'
 import { basketProductsCounter } from './basketProductCount'
 
@@ -23,7 +22,10 @@ export function handlerDeleteCurrentProductFromBasket (event) {
     basketProductsCounter()
     renderCardsInBasket(cardsWithoutDeleted)
     createProductCards()
-    document.querySelector('.modal-background').remove()
-    handlerModal(basketFilling())
+    const modalBackground = document.querySelector('.modal-background')
+    modalBackground.innerHTML = ''
+    modalBackground.append(basketFilling())
+    const closeModal = document.querySelector('.close-modal')
+    closeModal.addEventListener('click', (event) => handlerCloseModal(event))
   }
 }

@@ -1,5 +1,5 @@
 import { createErrorOrderingModal, createOrderingModal, createSuccessOrderingModal } from '../components/index.js'
-import { createProductCards, handlerCloseModal } from './index.js'
+import { createProductCards, handlerCloseModal, basketProductsCounter } from './index.js'
 
 function getInputNumbersValue (input) {
   return input.value.replace(/\D/g, '')
@@ -81,6 +81,7 @@ export function orderModal () {
           modalBackground.append(successOrder)
           localStorage.clear()
           createProductCards()
+          basketProductsCounter()
           document.querySelector('.close-modal').addEventListener('click', (event) => handlerCloseModal(event))
         }
       }
