@@ -2,14 +2,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
-
 const path = require('path')
+
 module.exports = {
   context: path.resolve(__dirname, 'src/scripts'),
   entry: './index.js',
   output: {
     filename: '[name].[contenthash].js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
     clean: true,
   },
   devServer: {
@@ -32,6 +32,10 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
