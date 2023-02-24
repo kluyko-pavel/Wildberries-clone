@@ -1,4 +1,4 @@
-import trashIcon from '../../assets/icons/trash.svg'
+import trashIcon from '../../../assets/icons/trash.svg'
 
 export function createBasketCard (image, price, oldPrice, productsBrand, productsName, id, counter = 1) {
   const basketCard = document.createElement('div')

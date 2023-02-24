@@ -1,9 +1,11 @@
-import { getDataLocalStorage, setDataLocalStorage } from './utils'
-import { handlerCloseModal } from './createModal'
-import { renderCardsInBasket } from './renderCardInbasket'
-import { createProductCards } from './createProductCards'
-import { basketFilling } from './basketFilling'
-import { basketProductsCounter } from './basketProductCount'
+import { getDataLocalStorage, setDataLocalStorage } from '../utils.js'
+import {
+  handlerCloseModal,
+  renderCardsInBasket,
+  createProductCards,
+  basketFilling,
+  basketProductsCounter
+} from '../index.js'
 
 export function handlerDeleteCurrentProductFromBasket (event) {
   if (event.target.className === 'basket-card-controls__remove-btn-icon') {

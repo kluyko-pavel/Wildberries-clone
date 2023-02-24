@@ -1,8 +1,8 @@
-import { getDataLocalStorage, setDataLocalStorage } from './utils'
+import { getDataLocalStorage, setDataLocalStorage } from '../utils.js'
 
-import { renderCardsInBasket } from './renderCardInbasket'
+import { renderCardsInBasket } from '../renders/renderCardInbasket'
 import { basketFilling } from './basketFilling'
-import { handlerCloseModal } from './createModal'
+import { handlerCloseModal } from '../createModal'
 
 export function handlerChangeCardsInBasketQuantity (event) {
   if (getDataLocalStorage('cards').length) {

@@ -1,4 +1,5 @@
 import iconArrow from '../../assets/icons/btn-arrow.svg'
+import iconPhone from '../../assets/icons/phone.svg'
 export const createTopScrollBtn = () => {
   const topButton = document.createElement('button')
   topButton.type = 'button'
@@ -20,8 +21,12 @@ export function createPhoneBtn () {
   const phoneLink = document.createElement('a')
   phoneLink.className = 'phone-button__link'
   phoneLink.href = 'tel: 84957755505'
-  phoneLink.innerHTML = '&#9743'
   phoneButton.append(phoneLink)
+
+  const phoneButtonImg = new Image()
+  phoneButtonImg.className = 'phone-button__link-img'
+  phoneButtonImg.src = iconPhone
+  phoneLink.append(phoneButtonImg)
 
   return phoneButton
 }

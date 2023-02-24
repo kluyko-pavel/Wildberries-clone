@@ -1,4 +1,4 @@
-import { createBasketCard, emptyBasket } from '../components'
+import { createBasketCard, emptyBasket } from '../../components/index.js'
 
 export function renderCardsInBasket (cards) {
   const basketCardsContainer = document.querySelector('.basket-window__cards-container')

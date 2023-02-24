@@ -1,6 +1,6 @@
-import { getDataLocalStorage } from './utils.js'
-import { createBasket } from '../components'
-import { handlerModal, handlerCloseModal } from './createModal.js'
+import { getDataLocalStorage } from '../utils.js'
+import { createBasket } from '../../components/index.js'
+import { handlerModal, handlerCloseModal } from '../createModal.js'
 
 import {
   createProductCards,
@@ -9,7 +9,7 @@ import {
   handlerDeleteCurrentProductFromBasket,
   orderModal,
   basketProductsCounter
-} from './index.js'
+} from '../index.js'
 
 export async function handlerClearBasket () {
   const modalBackground = document.querySelector('.modal-background')

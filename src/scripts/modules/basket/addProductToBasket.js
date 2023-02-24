@@ -1,5 +1,5 @@
-import { setDataLocalStorage, getDataLocalStorage } from './utils.js'
-import { createProductCards, basketProductsCounter } from './index.js'
+import { setDataLocalStorage, getDataLocalStorage } from '../utils.js'
+import { createProductCards, basketProductsCounter } from '../index.js'
 
 const URL = 'https://63e9269e811db3d7eff7f6ff.mockapi.io/products'
 

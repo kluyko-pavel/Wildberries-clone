@@ -1,4 +1,4 @@
-import { getDataLocalStorage } from './utils'
+import { getDataLocalStorage } from '../utils.js'
 
 export function basketProductsCounter () {
   const count = getDataLocalStorage('cards')

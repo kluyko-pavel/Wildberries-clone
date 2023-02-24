@@ -41,11 +41,10 @@
     opacity: 0.5;
     cursor: pointer;
   }
-
   &__search-input {
     position: relative;
     padding: 16px 20px 16px 52px;
-    background: rgba(255, 255, 255, 0.2);
+    background: none;
     border-radius: 56px;
     width: 100%;
     outline: none;
@@ -104,22 +103,6 @@
     margin-bottom: 7px;
     align-self: center;
   }
-  &__auth {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 14px;
-    transition: color 0.3s ease 0s;
-    background-color: transparent;
-    outline: none;
-    border: none;
-    &:hover {
-      color: #fff;
-    }
-  }
-
-  &__auth-icon {
-    margin-bottom: 10px;
-    margin-left: 10px;
-  }
 }
 
 @media (max-width: 414px) {
@@ -147,14 +130,6 @@
     &__search-input {
       padding: 16px 10px 16px 38px;
     }
-    // &__search-form-icon {
-    //   left: 10px;
-    // }
-    // &__search-form-icon-svg {
-    //   display: inline-block;
-    //   width: 21px;
-    //   height: 24px;
-    // }
   }
 }
 @media (max-width: 390px) {

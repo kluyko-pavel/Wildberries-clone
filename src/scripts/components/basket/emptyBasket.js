@@ -1,10 +1,11 @@
+import emptyBasketIcon from '../../../assets/icons/icon-for-empty-basket.png'
 export function emptyBasket () {
   const emptyBlock = document.createElement('div')
   emptyBlock.className = 'empty-basket'
 
-  const basketPic = document.createElement('img')
+  const basketPic = new Image()
   basketPic.className = 'empty-basket__image'
-  basketPic.src = 'https://cdn.icon-icons.com/icons2/1760/PNG/512/4105931-add-to-cart-buy-cart-sell-shop-shopping-cart_113919.png'
+  basketPic.src = emptyBasketIcon
   emptyBlock.append(basketPic)
 
   const emptyBasket = document.createElement('h3')

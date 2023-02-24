@@ -1,4 +1,5 @@
-import { createProductCard } from '../components/index.js'
+import { createProductCard } from '../../components/index.js'
+
 const cardsContainer = document.querySelector('.product-cards__container')
 
 export function renderCard (cards) {

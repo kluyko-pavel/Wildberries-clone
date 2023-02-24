@@ -1,5 +1,5 @@
-import { createBigProductCard } from '../components/bigProductCard'
-import { handlerModal } from './createModal'
+import { createBigProductCard } from '../../components/index.js'
+import { handlerModal } from '../index.js'
 
 export function renderBigProductCard (cards) {
   cards.forEach(({ image, price, oldPrice, productsBrand, productsName, id, inBasket }) => {

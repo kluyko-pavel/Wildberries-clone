@@ -1,11 +1,13 @@
-import { search, renderCard } from './index.js'
+import { search, renderCard } from '../index.js'
 
 const URL = 'https://63e9269e811db3d7eff7f6ff.mockapi.io/products'
 
 function debounce (func, waitTime) {
   let timeout
   return function () {
-    const funcCall = () => { func.apply(this, [...arguments]) }
+    const funcCall = () => {
+      func.apply(this, [...arguments])
+    }
     clearTimeout(timeout)
     timeout = setTimeout(funcCall, waitTime)
   }
