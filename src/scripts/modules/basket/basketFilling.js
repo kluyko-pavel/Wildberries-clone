@@ -11,7 +11,7 @@ import {
   basketProductsCounter
 } from '../index.js'
 
-export async function handlerClearBasket () {
+export function handlerClearBasket () {
   const modalBackground = document.querySelector('.modal-background')
   if (localStorage.getItem('cards')) {
     modalBackground.innerHTML = ''

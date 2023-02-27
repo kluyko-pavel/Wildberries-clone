@@ -115,25 +115,15 @@
     }
     &__search-input {
       padding: 16px 10px 16px 42px;
-      width: 100%;
     }
   }
 }
 
 @media (max-width: 390px) {
   .main-header {
-    &__search-form {
-      display: inline-flex;
-      order: -1;
-      background: none;
-    }
     &__search-input {
       padding: 16px 10px 16px 38px;
     }
-  }
-}
-@media (max-width: 390px) {
-  .main-header {
     &__content {
       gap: 10px;
       flex-direction: column;
@@ -144,7 +134,6 @@
     &__search-form {
       margin: 0;
       width: 100%;
-      order: 0;
     }
     &__search-form-icon {
       left: 16px;

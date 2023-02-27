@@ -20,7 +20,6 @@ export function createSuccessOrderingModal () {
   successOrderInfo.className = 'modal-order__info'
   successOrderInfo.innerText = 'Ожидайте звонка менеджера...'
   successModalOrder.append(successOrderInfo)
-  //   btnClose.addEventListener('click', (event) => handlerCloseModal(event))
 
   return successModalOrder
 }

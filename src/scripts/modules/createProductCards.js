@@ -2,7 +2,7 @@ import { renderCard, showCards, handlerShowMore } from './index.js'
 import { createShowMoreBtn } from '../components/index.js'
 import { getDataLocalStorage } from './utils.js'
 
-const URL = 'https://63e9269e811db3d7eff7f6ff.mockapi.io/products'
+const PRODUCTS_URL = 'https://63e9269e811db3d7eff7f6ff.mockapi.io/products'
 const cardsContainer = document.querySelector('.product-cards__container')
 
 export async function createProductCards () {
@@ -13,7 +13,7 @@ export async function createProductCards () {
     load.toggleAttribute('hidden', false)
   }
   try {
-    const res = await fetch(URL)
+    const res = await fetch(PRODUCTS_URL)
     const cards = await res.json()
     const cardsWithChangedButtons = getDataLocalStorage('changeButton')
     if (cardsWithChangedButtons.length > 0) {

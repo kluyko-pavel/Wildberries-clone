@@ -1,6 +1,6 @@
 import { search, renderCard } from '../index.js'
 
-const URL = 'https://63e9269e811db3d7eff7f6ff.mockapi.io/products'
+const PRODUCTS_URL = 'https://63e9269e811db3d7eff7f6ff.mockapi.io/products'
 
 function debounce (func, waitTime) {
   let timeout
@@ -17,7 +17,7 @@ async function renderSearchResult (event) {
   const tittle = document.querySelector('.product-cards__tittle')
   const cardsContainer = document.querySelector('.product-cards__container')
   const inputText = event.target.value.trim()
-  const res = await fetch(URL)
+  const res = await fetch(PRODUCTS_URL)
   const cards = await res.json()
   if (inputText.length > 0) {
     const searchCards = search(cards, inputText)

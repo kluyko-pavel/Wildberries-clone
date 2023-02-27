@@ -1,7 +1,7 @@
 import { setDataLocalStorage, getDataLocalStorage } from '../utils.js'
 import { createProductCards, basketProductsCounter } from '../index.js'
 
-const URL = 'https://63e9269e811db3d7eff7f6ff.mockapi.io/products'
+const PRODUCTS_URL = 'https://63e9269e811db3d7eff7f6ff.mockapi.io/products'
 
 export async function handlerGetCurrentProduct (event) {
   if (!event.target.matches('.product-card__button')) {
@@ -10,7 +10,7 @@ export async function handlerGetCurrentProduct (event) {
   const cardsInBasket = getDataLocalStorage('cards')
   const cardsWithChangedButtons = getDataLocalStorage('changeButton')
   const cardId = event.target.id
-  const res = await fetch(URL)
+  const res = await fetch(PRODUCTS_URL)
   const cards = await res.json()
 
   if (cardsWithChangedButtons.length > 0) {
